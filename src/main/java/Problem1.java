@@ -1,4 +1,3 @@
-import com.sun.org.apache.xpath.internal.SourceTree;
 
 /**
  * Euler Project Problem 1
@@ -15,10 +14,11 @@ public class Problem1 {
     int SumOfRunningTotals = 0;
     int Multiplier=1;
     while(Multiplier < 999){
+        if (Multiplier/5 ==)
         SumOfRunningTotals = 3*Multiplier + 5*Multiplier + SumOfRunningTotals;
         Multiplier = Multiplier+1;
-
         }
+        System.out.println(" The total is " + SumOfRunningTotals);
 
     }
 }
