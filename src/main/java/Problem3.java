@@ -13,7 +13,7 @@ public class Problem3 {
         long numberToFactor = 600851475143L;
         int primeCheck, greatestPrime =0,deviser = 2;
 
-        while(deviser < 775147){
+        while(deviser < 775147){ // use of this number based on the square root of the desired number
             if (numberToFactor%deviser ==0){
                 primeCheck =2;
                 while (primeCheck <= deviser){
