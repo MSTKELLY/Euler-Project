@@ -9,11 +9,9 @@ import java.math.BigInteger;
  */
 public class Problem3 {
     public static void main(String[] args) {
+        //variables used
         long numberToFactor = 600851475143L;
-        int greatestPrime =0;
-        int prime = 0;
-        int deviser = 2;
-        int primeCheck;
+        int primeCheck, greatestPrime =0,deviser = 2;
 
         while(deviser < 775147){
             if (numberToFactor%deviser ==0){
@@ -22,7 +20,6 @@ public class Problem3 {
                     if (deviser%primeCheck == 0){
                         if (deviser == primeCheck){
                             greatestPrime = primeCheck;
-                            System.out.println(greatestPrime);
                         }
                         else{
                             primeCheck = deviser+2;
