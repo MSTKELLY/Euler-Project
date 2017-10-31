@@ -7,24 +7,38 @@
  */
 public class Problem4 {
     public static void main(String[] args) {
-        int desiredpalindrom = 998001;
-        int totalMultiple;
-        int firstMultiplier=999;
-        int secondMultiplier =999;
+        int totalMultiple, workingNumber, tester;
+        int firstMultiplier=999, secondMultiplier =999, palindromeTest;
+        int[] digitsOfTesterArray = new int[6];
 
 //        while(firstMultiplier > 100){
 //            while (secondMultiplier > 100){
 //                totalMultiple = firstMultiplier*secondMultiplier;
-//                int firstDigit = Integer.parseInt(Integer.toString(totalMultiple).substring(0, 1));
-//                System.out.println(" The first digit is " + firstDigit);
-//                System.out.println(" Current total " + totalMultiple);
+//
 //                secondMultiplier--;
 //            }
 //            firstMultiplier--;
 //        }
-        int tester =12345;
-        while (tester.)
-        int firstDigit = Integer.parseInt(Integer.toString(tester).substring(0, 1));
-//                System.out.println(" The first digit is " + firstDigit);
+        totalMultiple = 123456;
+        if (totalMultiple > 10000) {
+            palindromeTest =100000;
+            workingNumber = totalMultiple;
+            int i = 0;
+            while(palindromeTest > 0){
+                tester = workingNumber/palindromeTest;
+                System.out.println(tester);
+                workingNumber =workingNumber-(tester*palindromeTest);
+                palindromeTest = palindromeTest/10;
+                digitsOfTesterArray[i] = tester;
+                i++;
+            }
+            System.out.println("break");
+            int j=0;
+            while(j<6){
+                System.out.println(digitsOfTesterArray[j]);
+                j++;
+            }
+        }
+
     }
 }
