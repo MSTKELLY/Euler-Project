@@ -7,38 +7,47 @@
  */
 public class Problem4 {
     public static void main(String[] args) {
-        int totalMultiple, workingNumber, tester;
+        int totalMultiple, workingNumber, tester, palindrome=0;
         int firstMultiplier=999, secondMultiplier =999, palindromeTest;
-        int[] digitsOfTesterArray = new int[6];
+        int[] digitsOfTesterArray = new int[5];
 
-//        while(firstMultiplier > 100){
-//            while (secondMultiplier > 100){
-//                totalMultiple = firstMultiplier*secondMultiplier;
-//
-//                secondMultiplier--;
-//            }
-//            firstMultiplier--;
-//        }
-        totalMultiple = 123456;
-        if (totalMultiple > 10000) {
-            palindromeTest =100000;
-            workingNumber = totalMultiple;
-            int i = 0;
-            while(palindromeTest > 0){
-                tester = workingNumber/palindromeTest;
-                System.out.println(tester);
-                workingNumber =workingNumber-(tester*palindromeTest);
-                palindromeTest = palindromeTest/10;
-                digitsOfTesterArray[i] = tester;
-                i++;
+        while(firstMultiplier > 100){
+            while (secondMultiplier > 100){
+                totalMultiple = firstMultiplier*secondMultiplier;
+                if (totalMultiple > 100000) {
+                    palindromeTest =100000;
+                    workingNumber = totalMultiple;
+                    while(palindromeTest > 0){
+                        tester = workingNumber/palindromeTest;
+                    //    System.out.println(tester);
+                        workingNumber =workingNumber-(tester*palindromeTest);
+                        palindromeTest = palindromeTest/10;
+                    }
+                   // System.out.println(totalMultiple);
+                    int i=0;
+                    int j=5;
+                    int k=0;
+                    System.out.println(digitsOfTesterArray[i]);
+
+                    while(i >=3){
+                        if (digitsOfTesterArray[i] == digitsOfTesterArray[j]){
+                            k++;
+                        }
+                        i++;
+                        j--;
+                    }
+                    if(k == 3){
+                        if(totalMultiple>palindrome ){
+                            palindrome= totalMultiple;
+                        }
+                    }
+
+                }
+                secondMultiplier--;
             }
-            System.out.println("break");
-            int j=0;
-            while(j<6){
-                System.out.println(digitsOfTesterArray[j]);
-                j++;
-            }
+            firstMultiplier--;
         }
+        System.out.println(" the largest is " +palindrome);
 
     }
 }

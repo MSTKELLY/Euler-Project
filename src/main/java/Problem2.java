@@ -9,14 +9,11 @@
  */
 public class Problem2 {
     public static void main(String[] args) {
-        int lastTerm = 1;
-        int middleTerm = 1;
-        int nextTerm = 2;
-        int runningTotal =0;
-        int donNotExceed  = 4000000;
+        // variables list
+        int runningTotal =0,lastTerm = 1, middleTerm = 1, nextTerm = 2;
+        int doNotExceed  = 4000000;
 
-        while (nextTerm < donNotExceed){
-            System.out.println(middleTerm + ",");
+        while (nextTerm < doNotExceed){
             if(middleTerm%2 == 0){
                 runningTotal = middleTerm+runningTotal;
             }
@@ -25,5 +22,6 @@ public class Problem2 {
             middleTerm =nextTerm;
         }
         System.out.println("The total is " +runningTotal);
+
     }
 }
